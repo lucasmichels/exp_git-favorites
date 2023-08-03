@@ -30,6 +30,10 @@ This project is a page to save your favorite GitHub profiles.
 
 
 
+https://github.com/lucasmichels/exp_git-favorites/assets/39132280/1e313f8e-b11d-443e-a4ac-bf432cec59f5
+
+
+
 ## Authors
 
 - [@lucasmichels](https://www.github.com/lucasmichels)
