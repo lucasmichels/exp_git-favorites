@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* general colors */
+    --bg-color: #000000;
+    --bg-searchIpt: #06181C;
+    --bg-searchBtn: #065E7C;
+    --fc-placeholder: #7C7C8A;
+
+    /* table colors */
+    --th-bgcolor: #092D38;
+    --tr-odd: rgba(6, 22, 27, 0.50);
+    --tr-even: #06181C;
+    --fc-table: #E1E1E6;
+    --fc-remove: #F75A68;
+
+    /* fonts */
+    --ff-app: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+
+    background-color: var(--bg-color);
+}
+
+body * {
+    font-family: var(--ff-app);
+}
+
+#app {
+    max-width: 112.0rem;
+
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 8.5rem 0;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    height: 4.8rem;
+    min-width: 36rem;
+    max-width: 46.2rem;
+
+    background-color: var(--bg-searchIpt);
+    border: none;
+    border-radius: .5rem;
+
+    margin-right: 0.8rem;
+}
+
+.search input {
+    font-size: 1.6rem;
+    color: var(--fc-table);
+    padding: 1.5rem;
+}
+
+#search-input::placeholder {
+    font-size: 1.6rem;
+
+    color: var(--fc-placeholder);
+}
+
+.search button {
+    height: 4.8rem;
+    width: 17rem;
+
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--bg-searchBtn);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #FFFFFF;
+
+    color: var(--bg-searchBtn);
+}
+
+.search button:hover .favorite-star path {
+    fill: var(--bg-searchBtn);
+}
+
+.table-wrapper {
+    height: fit-content;
+    
+    border-radius: 1.2rem;
+    border: 0.15rem solid #4A808C;
+
+    overflow-y: overlay;
+    height: 42rem;
+
+    display: block;
+}
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+table * {
+    color: var(--fc-table);
+    font-size: 2.0rem;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+}
+
+table th {
+    background-color: var(--th-bgcolor);
+
+    font-weight: bold;
+    text-align: left;
+
+    padding: 1.6rem 0 1.6rem 4.0rem;
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--tr-odd);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--tr-even);
+}
+
+table tr:last-child td {
+    border: none;
+}
+
+table td {
+    padding: 2.8rem 0 2.8rem 4.0rem;
+
+    border-bottom: 0.15rem solid #4A808C;
+}
+
+table td p {
+    font-weight: bold;
+    line-height: 160%;
+}
+
+.repositories,
+.followers {
+    font-weight: bold;
+    line-height: 160%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1.6rem;
+}
+
+.username p {
+    margin-bottom: .8rem;
+    
+}
+
+.user img{
+    border-radius: 50%;
+
+    width: 5.6rem;
+    height: 5.6rem;
+}
+
+.user a {
+    text-decoration: none;
+}
+
+table td button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    color: var(--fc-remove);
+    font-weight: bold;
+}
+
+table td button:hover {
+    filter: brightness(1.25);
+}
+
+tbody {
+    display: block;
+    height: 38rem;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+thead,
+tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+tbody::-webkit-scrollbar {
+    width: 1rem;
+}
+
+tbody:-webkit-scrollbar-track {
+    margin-block-start: 6rem;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background-color: #4A808C;
+    border-radius: 2rem;
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36.2rem;
+    gap: 6rem;
+    background-color: #06181c;
+    border-radius: 0 0 12px 12px;
+    color: #4E5455;
+    font-size: 3.0rem;
+}
+
+.hidden {
+    display: none;
+}
